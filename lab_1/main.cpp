@@ -1,11 +1,9 @@
 #include <iostream>
-#include <windows.h>
 #include "heder.h"
 
 int main() {
-    SetConsoleOutputCP(CP_UTF8);
-    SetConsoleCP(CP_UTF8);
-int choice = -1;
+    setlocale(LC_ALL, "Russian");
+int choice = -1.0;
     while (choice != 0) {
 
 
@@ -22,7 +20,7 @@ int choice = -1;
 
         switch (choice) {
             // Задание 1
-        case 1: {
+        case 11: {
             double x;
             while (true) {
                 std::cout << "Введите x: ";
@@ -34,7 +32,7 @@ int choice = -1;
             std::cout << "Результат: " << fraction(x) << std::endl;
             break;
         }
-        case 3: {
+        case 13: {
             char x;
             while (true) {
                 std::cout << "Введите цифру: ";
@@ -46,7 +44,7 @@ int choice = -1;
             std::cout << "Результат: " << charToNum(x) << std::endl;
             break;
         }
-        case 5: {
+        case 15: {
             int x;
             while (true) {
                 std::cout << "Введите x: ";
@@ -59,7 +57,7 @@ int choice = -1;
                 << std::endl;
             break;
         }
-        case 7: {
+        case 17: {
             int a, b, num;
             while (true) {
                 std::cout << "Введите a, b, num (через Enter): ";
@@ -72,7 +70,7 @@ int choice = -1;
                 << std::endl;
             break;
         }
-        case 9: {
+        case 19: {
             int a, b, c;
             while (true) {
                 std::cout << "Введите a, b, c: ";
@@ -86,8 +84,8 @@ int choice = -1;
             break;
         }
 
-              //  Задание 2
-        case 11: {
+
+            case 21: {
             int x;
             while (true) {
                 std::cout << "Введите x: ";
@@ -99,7 +97,7 @@ int choice = -1;
             std::cout << "Результат: " << abs(x) << std::endl;
             break;
         }
-        case 13: {
+        case 23: {
             int x;
             while (true) {
                 std::cout << "Введите x: ";
@@ -112,7 +110,7 @@ int choice = -1;
                 << std::endl;
             break;
         }
-        case 15: {
+        case 25: {
             int x, y, z;
             while (true) {
                 std::cout << "Введите x, y, z: ";
@@ -124,7 +122,7 @@ int choice = -1;
             std::cout << "Результат: " << max3(x, y, z) << std::endl;
             break;
         }
-        case 17: {
+        case 27: {
             int x, y;
             while (true) {
                 std::cout << "Введите x, y: ";
@@ -136,7 +134,7 @@ int choice = -1;
             std::cout << "Результат: " << sum2(x, y) << std::endl;
             break;
         }
-        case 19: {
+        case 29: {
             int x;
             while (true) {
                 std::cout << "Введите день недели (1-7): ";
@@ -149,8 +147,8 @@ int choice = -1;
             break;
         }
 
-        // Задание 3
-        case 21: {
+
+        case 31: {
             int x;
             while (true) {
                 std::cout << "Введите x: ";
@@ -162,7 +160,7 @@ int choice = -1;
             std::cout << "Результат: " << listNumbs(x) << std::endl;
             break;
         }
-        case 23: {
+        case 33: {
             int x;
             while (true) {
                 std::cout << "Введите x: ";
@@ -174,7 +172,7 @@ int choice = -1;
             std::cout << "Результат: " << chet(x) << std::endl;
             break;
         }
-        case 25: {
+        case 35: {
             long x;
             while (true) {
                 std::cout << "Введите число: ";
@@ -186,7 +184,7 @@ int choice = -1;
             std::cout << "Результат: " << numLen(x) << std::endl;
             break;
         }
-        case 27: {
+        case 37: {
             int x;
             while (true) {
                 std::cout << "Введите сторону квадрата: ";
@@ -198,7 +196,7 @@ int choice = -1;
             square(x);
             break;
         }
-        case 29: {
+        case 39: {
             int x;
             while (true) {
                 std::cout << "Введите высоту: ";
@@ -211,8 +209,8 @@ int choice = -1;
             break;
         }
 
-        // Задание 4
-        case 31: {
+
+        case 41: {
             int n;
             std::cout << "Сколько чисел? ";
             while (!(std::cin >> n) || n < 0 || n > 99) {
@@ -243,7 +241,7 @@ int choice = -1;
             std::cout << "Индекс: " << findFirst(arr, x) << std::endl;
             break;
         }
-        case 33: {
+        case 43: {
             int n;
             std::cout << "Сколько чисел? ";
             while (!(std::cin >> n) || n < 1 || n > 99) {
@@ -266,8 +264,42 @@ int choice = -1;
             std::cout << "Результат: " << maxAds(arr) << std::endl;
             break;
         }
+              case 45: {
+                    int arr[] = {1,2,3,4,5};
+                    int ins[] = {7,8,9};
+            int pos;
+            std::cout << "arr = ";
+            for (int i = 0; i < 5; ++i) std::cout << arr[i] << " ";
+            std::cout << std::endl;
+            std::cout << "ins = ";
+            for (int i = 0; i < 3; ++i) std::cout << ins[i] << " ";
+            std::cout << std::endl;
+            std::cout << "введи pos = ";
+            std::cin >> pos;
+            add(arr, ins, pos);
+              }
+            case 47: {
+            int arr[] = {1,2,3,4,5};
+            std::cout << "arr = ";
+            for (int i = 0; i < 5; ++i) std::cout << arr[i] << " ";
+            std::cout << std::endl;
+            reverseBack(arr);
 
-        case 0:
+        }
+            case 49: {
+            int arr[] = {1, 2,3,8,2,2,9};
+            int x;
+            int n = sizeof(arr) / sizeof(arr[0]);
+            std::cout << "arr = ";
+            for (int i = 0; i < 5; ++i) std::cout << arr[i] << " ";
+            std::cout << std::endl;
+            std::cout << "введите x =";
+            std::cin >> x;
+            findAll(arr,n, x);
+        }
+
+            case 0:
+            std::cout << std::endl;
             std::cout << "Выход." << std::endl;
             break;
 

@@ -5,9 +5,6 @@ int main() {
     setlocale(LC_ALL, "Russian");
 int choice = -1.0;
     while (choice != 0) {
-
-
-        // Ввод выбора меню с проверкой
         while (true) {
             if (std::cin >> choice) {
                 break;
@@ -242,25 +239,12 @@ int choice = -1.0;
             break;
         }
         case 43: {
-            int n;
-            std::cout << "Сколько чисел? ";
-            while (!(std::cin >> n) || n < 1 || n > 99) {
-                std::cout << "Ошибка: введите число от 1 до 99." << std::endl;
-                std::cin.clear();
-                std::cin.ignore(100, '\n');
+            int arr[] = {1, 6, 4, 5,-9, 3, 2};
+            std:: cout << "arr = ";
+            for (int i = 0; i < 7; ++i) {
+                std::cout << arr[i] << " ";
             }
-
-            int arr[7];
-            std::cout << "Введите " << n << " чисел: ";
-            for (int i = 0; i < n; ++i) {
-                while (!(std::cin >> arr[i])) {
-                    std::cout << "Ошибка: введите число." << std::endl;
-                    std::cin.clear();
-                    std::cin.ignore(7, '\n');
-                }
-            }
-            arr[n] = 0;
-
+            std::cout << std::endl;
             std::cout << "Результат: " << maxAds(arr) << std::endl;
             break;
         }

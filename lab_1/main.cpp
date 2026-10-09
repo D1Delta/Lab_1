@@ -275,7 +275,7 @@ int choice = -1.0;
             int x;
             int n = sizeof(arr) / sizeof(arr[0]);
             std::cout << "arr = ";
-            for (int i = 0; i < 5; ++i) std::cout << arr[i] << " ";
+            for (int i = 0; i < n; ++i) std::cout << arr[i] << " ";
             std::cout << std::endl;
             std::cout << "введите x =";
             std::cin >> x;
